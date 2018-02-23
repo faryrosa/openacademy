@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    
+    <report
+        id="report_sessions_daily"
+        model="openacademy.session"
+        string="Sessions Daily Report"
+        name="openacademy.report_sessions_daily_view"
+        file="openacademy.report_sessions_daily"
+        report_type="qweb-pdf" 
+    />
+    
+    <template id="report_sessions_daily_view">
+        <t t-call="report.html_container">
+            <t t-call="report.internal_layout">
+                <div class="page">
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <div class="text-center">
+                        <h2>Sessions Daily</h2>
+
+                        <strong><t t-esc="date_start"/></strong>
+                    </div>
+
+                    <!-- Sessions -->
+                    <h3>Sessions</h3>
+                    <table  class="table table-condensed">
+                        <thead><tr>
+                            <th>Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Duration</th>
+                            <th>Instructor</th>
+                            <th>Course</th>
+                            <th>Taken seats</th>
+                        </tr></thead>
+                        <tbody>
+
+                        <tr t-foreach="docs" t-as="doc">
+                            <td><t t-esc="doc.name" /></td>
+                            <td><t t-esc="doc.start_date" /></td>
+                            <td><t t-esc="doc.end_date" /></td>
+                            <td><t t-esc="doc.duration" /></td>
+                            <td><t t-esc="doc.instructor_id.name" /></td>
+                            <td><t t-esc="doc.course_id.name" /></td>
+                            <td><t t-esc="doc.taken_seats" /></td>
+                            
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <br/>
+
+                   
+                </div>
+            </t>
+        </t>
+    </template>
+</data>
+</openerp>
