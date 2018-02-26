@@ -32,7 +32,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/partner.xml',
-        # ~ 'wizard/wizard_report_daily.xml',
+        'wizard/wizard_report_daily.xml',
         'report/report_session_daily.xml',
     ],
     # only loaded in demonstration mode

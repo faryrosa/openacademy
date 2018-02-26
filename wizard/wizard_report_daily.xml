@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="sessions_daily_wizard" model="ir.ui.view">
-        <field name="name">sessions.daily.wizard.form</field>
-        <field name="model">sessions.daily.wizard</field>
+    <record id="sessions_daily_report_wizard" model="ir.ui.view">
+        <field name="name">sessions.daily.report.wizard.form</field>
+        <field name="model">sessions.daily.report.wizard</field>
         <field name="arch" type="xml">
             <form string="Sessions Daily">
                 <group>
@@ -19,7 +19,7 @@
 
     <record id="action_report_sessions_daily" model="ir.actions.act_window">
         <field name="name">Sessions Daily</field>
-        <field name="res_model">sessions.report.daily.wizard</field>
+        <field name="res_model">sessions.daily.report.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
