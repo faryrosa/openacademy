@@ -4,7 +4,7 @@
         model="openacademy.session"
         string="Sessions Daily Report"
         name="openacademy.report_sessions_daily_view"
-        file="openacademy.report_sessions_daily"
+        file="openacademy.report_sessions_daily_view"
         report_type="qweb-pdf" 
     />
 
@@ -17,7 +17,7 @@
                     <br/>
 
                     <div class="text-center">
-                        <h2>Sessions Daily</h2>
+                        <h2>Sessions Daily!</h2>
 
                         <strong><t t-esc="date_start"/></strong>
                     </div>

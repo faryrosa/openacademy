@@ -16,4 +16,4 @@ class SessionsDailyReport(models.TransientModel):
         sessions_ids = sessions.mapped('id')
         
         return self.env['report'].get_action(
-            sessions_ids, 'openacademy.report_sessions_daily', data=data)
+            sessions_ids, 'openacademy.report_sessions_daily_view', data=data)
