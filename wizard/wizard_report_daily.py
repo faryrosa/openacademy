@@ -10,10 +10,10 @@ class SessionsDailyReport(models.TransientModel):
     
     @api.multi
     def generate_report(self):
-        data = {'date_start': self.start_date}
+        # ~ data = {'date_start': self.start_date}
 
         sessions = self.env['openacademy.session'].search([('start_date', '=', self.start_date)])
         sessions_ids = sessions.mapped('id')
         
         return self.env['report'].get_action(
-            sessions_ids, 'openacademy.report_sessions_daily_view', data=data)
+            sessions, 'openacademy.report_sessions_daily_view')

@@ -1,14 +1,14 @@
 <odoo>
     <report
-        id="report_sessions_daily"
-        model="openacademy.session"
-        string="Sessions Daily Report"
-        name="openacademy.report_sessions_daily_view"
-        file="openacademy.report_sessions_daily_view"
+        id="report_sessions_daily_independ"
+        model="sessions.daily.report.wizard.independ"
+        string="Sessions Daily IND Report"
+        name="openacademy.report_sessions_daily_ind_view"
+        file="openacademy.report_sessions_daily_ind_view"
         report_type="qweb-pdf" 
     />
 
-    <template id="report_sessions_daily_view">
+    <template id="report_sessions_daily_ind_view">
         <t t-call="report.html_container">
             <t t-call="report.layout">
                 <div class="page">
@@ -17,7 +17,8 @@
                     <br/>
 
                     <div class="text-center">
-                        <h2>Sessions Daily</h2>
+                        <h2>Sessions Daily IND</h2>
+                        <strong><span t-field="docs.start_date" t-options ='{"format": "MM/dd/yyyy"}'></span></strong>
                     </div>
 
                     <!-- Sessions -->
@@ -34,7 +35,7 @@
                         </tr></thead>
                         <tbody>
 
-                        <tr t-foreach="docs" t-as="doc">
+                        <tr t-foreach="docs.sessions_ids" t-as="doc">
                             <td><t t-esc="doc.name" /></td>
                             <td><t t-esc="doc.start_date" /></td>
                             <td><t t-esc="doc.end_date" /></td>

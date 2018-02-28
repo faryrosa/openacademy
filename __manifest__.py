@@ -34,6 +34,8 @@
         'views/partner.xml',
         'report/report_session_daily.xml',
         'wizard/wizard_report_daily.xml',
+        'wizard/wizard_report_daily_independ.xml',
+        'report/report_session_daily_independ.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

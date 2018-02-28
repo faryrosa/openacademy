@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sessions_daily_report_wizard" model="ir.ui.view">
+        <field name="name">sessions.daily.report.wizard.independ.form</field>
+        <field name="model">sessions.daily.report.wizard.independ</field>
+        <field name="arch" type="xml">
+            <form string="Sessions Daily IND">
+                <group>
+                    <field name="start_date"/>
+                </group>
+                <footer>
+                    <button name="generate_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_report_sessions_daily_independ" model="ir.actions.act_window">
+        <field name="name">Sessions Daily IND</field>
+        <field name="res_model">sessions.daily.report.wizard.independ</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    
+    <menuitem id="menu_report_sessions_daily_ind" name="Report of Sessions Daily IND" 
+        action="action_report_sessions_daily_independ" parent="openacademy_menu"/>
+
+</odoo>
