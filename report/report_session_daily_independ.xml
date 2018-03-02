@@ -15,15 +15,15 @@
                     <br/>
                     <br/>
                     <br/>
-
-                    <div class="text-center">
-                        <h2>Sessions Daily IND</h2>
-                        <strong><span t-field="docs.start_date" t-options ='{"format": "MM/dd/yyyy"}'></span></strong>
+                    
+                    <div class="jumbotron text-center">
+                      <h1>Sessions Daily IND</h1>
+                      <p><strong><span t-field="docs.start_date" t-options ='{"format": "MM/dd/yyyy"}'></span></strong></p>
                     </div>
 
                     <!-- Sessions -->
                     <h3>Sessions</h3>
-                    <table  class="table table-condensed">
+                    <table  class="table table-bordered">
                         <thead><tr>
                             <th>Name</th>
                             <th>Start Date</th>
